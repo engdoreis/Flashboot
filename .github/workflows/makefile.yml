@@ -1,0 +1,31 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        sudo apt install clang-format black
+
+    - name: Run linting check
+      run: make format-check
+      
+    - name: Build release lib for x86_64_linux
+      run: make static CPU=x86 PROFILE=release
+            
+    - name: Build test for x86_64_linux
+      run: make testApp CPU=x86 PROFILE=release
+      
+    - name: Run test for x86_64_linux
+      run: make test CPU=x86 PROFILE=release

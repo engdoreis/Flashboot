@@ -91,8 +91,12 @@ debug: testApp
 	gdb -ex "layout src" -ex "b main" $(BUILD_DIR)/$^.exe
 
 format-fix:
-	find ./ -name *.c -o -name *.h -o -name *.cpp | xargs clang-format -i
-	black test/*.py
+	@find ./ -name *.c -o -name *.h -o -name *.cpp | xargs clang-format -i
+	@black test/*.py
+
+format-check:
+	@find ./ -name *.c -o -name *.h -o -name *.cpp | xargs clang-format -n
+	@black --check test/*.py
 	
 log:
 	@printf "\nBuilding $(TARGET_NAME) whith the folowing setup:\n"
