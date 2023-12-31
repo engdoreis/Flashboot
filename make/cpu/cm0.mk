@@ -1,20 +1,6 @@
-#*********************************************************************************************
-# @file     
-# @project  
-# @platform 
-# @device   
-# @author   Eng. Douglas Reis
-# @version  0.1
-# @date     03-Mar-2020
-# @brief    Configure the source to be use during compilation of the Project    
-#
-# @history
-#
-# When         Who               What
-# -----------  ----------------  -------------------------------------------------------------
-# 03-Mar-2020  Eng. Douglas Reis     - Initial Version. 
-# ********************************************************************************************
-
+# Copyright Douglas Santos Reis.
+# Licensed under the Apache License, Version 2.0, see LICENSE for details.
+# SPDX-License-Identifier: Apache-2.0
 
 CROSS_TOOLCHAIN        ?= $(subst \,/,$(TOOLCHAIN_HOME))/bin/arm-none-eabi-
 

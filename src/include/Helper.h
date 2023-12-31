@@ -1,9 +1,6 @@
-/*
- * Memory.h
- *
- *  Created on: Mar 13, 2020
- *      Author: Douglas Reis
- */
+// Copyright Douglas Santos Reis.
+// Licensed under the Apache License, Version 2.0, see LICENSE for details.
+// SPDX-License-Identifier: Apache-2.0
 
 #ifndef FLASHBOOT_HELPER_H_
 #define FLASHBOOT_HELPER_H_
