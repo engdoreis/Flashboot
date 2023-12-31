@@ -10,10 +10,15 @@ It features:
 - CRC32 verification.
 - Rollback.
 
-## Nix environment
+## Building and Testing
+### Dependencies using Nix
 By initializing a nix shell it will fetch all the dependencies.
 ```sh
 nix develop
+```
+### Dependencies using Ubuntu package manager
+```sh
+sudo apt install python3 gcc clang-format gdb black doxygen
 ```
 
 ## Build
@@ -46,4 +51,9 @@ make test
 +-----------------------------------------------------------------------------------+
 | Test case 8: Backup success                                              Approved |
 +-----------------------------------------------------------------------------------+
+```
+
+## Formatting code
+```sh
+make format-fix
 ```
